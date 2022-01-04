@@ -12,15 +12,15 @@ necessarily unique (coin values can repeat).
 RUN STEP 4 BELOW BEFORE SUBMITTING LABS** 
 
 1. Download and install Python on your computer
-2. Navigate to the [SortedSquaredArraySol1.Mod1]() directory
+2. Navigate to the [NonConstructibleChange.Mod1]() directory
 3. Run the program as a module: `python -m Mod1 -h`. This will print the help 
    message.
 4. Run the program as a module (with real inputs): `python -m Mod1`
    a. IE: `python -m Mod1`
 
-The program's output will be displated in the output.txt file.
+The program's output will be displayed in the output.txt file.
 
-### Lab1 Usage:
+### Mod1 Usage:
 
 ```commandline
 usage: python -m Mod1 [-h] 

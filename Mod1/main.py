@@ -1,16 +1,28 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+"""
+time: O(n log(n)) since we perform a sort
+space: O(1) if we are allowed to sort in place O(n) if not due to needing to
+create another structure to hold the sorted data
+"""
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def nonconstructible_change(coins):
+    # always start by sorting the array
+    coins.sort()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    """
+    initialize a counter for the allowable amount of change allowed for each 
+    coin
+    """
+    allowable_change = 0
+
+    """
+    create a for-loop that iterates over the array of coins controlling for 
+    the condition of NOT having a a coin greater than the amount of allowable 
+    change
+    """
+    for i in coins:
+        if i > allowable_change + 1:
+            return allowable_change + 1
+
+
+print(nonconstructible_change(f"the minimum amount {[1, 1, 1, 1, 1]}"))
