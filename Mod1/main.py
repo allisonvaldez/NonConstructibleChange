@@ -10,8 +10,8 @@ def nonconstructible_change(coins):
     coins.sort()
 
     """
-    initialize a counter for the allowable amount of change allowed for each 
-    coin
+    initialize a counter to check the for the allowable amount of change 
+    allowed for each coin when adding it to the next
     """
     allowable_change = 0
 
@@ -24,5 +24,15 @@ def nonconstructible_change(coins):
         if i > allowable_change + 1:
             return allowable_change + 1
 
+        """
+        make sure to increment within the for-loop to go to the next coin
+        """
+        allowable_change += i
 
-print(nonconstructible_change(f"the minimum amount {[1, 1, 1, 1, 1]}"))
+    """
+    return the allowable amount of change from going to one coin to the next
+    """
+    return allowable_change + 1
+
+
+print(nonconstructible_change([1, 2, 5]))
